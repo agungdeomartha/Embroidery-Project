@@ -61,7 +61,11 @@ Partial Class Form1
         Me.ButtonUbah = New System.Windows.Forms.Button
         Me.ButtonHapus = New System.Windows.Forms.Button
         Me.ButtonKeluar = New System.Windows.Forms.Button
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView
+        Me.KodeAkun = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.NamaAkun = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -99,7 +103,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(597, 47)
+        Me.Label3.Location = New System.Drawing.Point(996, 47)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 13)
         Me.Label3.TabIndex = 4
@@ -107,14 +111,14 @@ Partial Class Form1
         '
         'TbKodeAkun
         '
-        Me.TbKodeAkun.Location = New System.Drawing.Point(669, 44)
+        Me.TbKodeAkun.Location = New System.Drawing.Point(1068, 44)
         Me.TbKodeAkun.Name = "TbKodeAkun"
         Me.TbKodeAkun.Size = New System.Drawing.Size(85, 20)
         Me.TbKodeAkun.TabIndex = 5
         '
         'TbNamaAkun
         '
-        Me.TbNamaAkun.Location = New System.Drawing.Point(760, 44)
+        Me.TbNamaAkun.Location = New System.Drawing.Point(1159, 44)
         Me.TbNamaAkun.Name = "TbNamaAkun"
         Me.TbNamaAkun.Size = New System.Drawing.Size(195, 20)
         Me.TbNamaAkun.TabIndex = 6
@@ -122,7 +126,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(597, 75)
+        Me.Label4.Location = New System.Drawing.Point(996, 75)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(62, 13)
         Me.Label4.TabIndex = 7
@@ -130,9 +134,9 @@ Partial Class Form1
         '
         'TbKeterangan
         '
-        Me.TbKeterangan.Location = New System.Drawing.Point(669, 70)
+        Me.TbKeterangan.Location = New System.Drawing.Point(1068, 70)
         Me.TbKeterangan.Name = "TbKeterangan"
-        Me.TbKeterangan.Size = New System.Drawing.Size(223, 20)
+        Me.TbKeterangan.Size = New System.Drawing.Size(286, 20)
         Me.TbKeterangan.TabIndex = 8
         '
         'DataGridView1
@@ -141,7 +145,7 @@ Partial Class Form1
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoUrut, Me.NamaBarang1, Me.NamaBarang2, Me.NamaBarang3, Me.NamaBarang4, Me.NamaBarang5, Me.NamaBarang6, Me.NamaBarang7, Me.NamaBarang8, Me.NamaBarang9, Me.NamaBarang10, Me.Jumlah, Me.Satuan, Me.Keterangan1, Me.Keterangan2, Me.Keterangan3, Me.Keterangan4, Me.Keterangan5, Me.Keterangan6, Me.Keterangan7, Me.Keterangan8, Me.Keterangan9, Me.Keterangan10})
         Me.DataGridView1.Location = New System.Drawing.Point(19, 121)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1331, 354)
+        Me.DataGridView1.Size = New System.Drawing.Size(1052, 354)
         Me.DataGridView1.TabIndex = 9
         '
         'NoUrut
@@ -313,12 +317,34 @@ Partial Class Form1
         Me.ButtonKeluar.Text = "Keluar"
         Me.ButtonKeluar.UseVisualStyleBackColor = True
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KodeAkun, Me.NamaAkun})
+        Me.DataGridView2.Location = New System.Drawing.Point(1089, 121)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(265, 354)
+        Me.DataGridView2.TabIndex = 16
+        '
+        'KodeAkun
+        '
+        Me.KodeAkun.HeaderText = "Kode Akun"
+        Me.KodeAkun.Name = "KodeAkun"
+        '
+        'NamaAkun
+        '
+        Me.NamaAkun.HeaderText = "Nama Akun"
+        Me.NamaAkun.Name = "NamaAkun"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1366, 669)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.ButtonKeluar)
         Me.Controls.Add(Me.ButtonHapus)
         Me.Controls.Add(Me.ButtonUbah)
@@ -339,6 +365,7 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -382,5 +409,8 @@ Partial Class Form1
     Friend WithEvents Keterangan8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Keterangan9 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Keterangan10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents KodeAkun As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NamaAkun As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class

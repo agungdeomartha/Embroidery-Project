@@ -113,12 +113,39 @@ Public Class Form1
 
     Private Sub ButtonSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSimpan.Click
         Call koneksi_transaksi()
-        For Each rw As DataGridViewRow In DataGridView1.Rows
-            If Not rw.Cells(0).Value = "" Then
-                Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN_DETIL (NO_BUKTI, NO_URUT, NAMA_BARANG, NAMA_BARANG_2, NAMA_BARANG_3, NAMA_BARANG_4, NAMA_BARANG_5, NAMA_BARANG_6, NAMA_BARANG_7, NAMA_BARANG_8, NAMA_BARANG_9, NAMA_BARANG_10, JUMLAH, SATUAN, KETERANGAN_1, KETERANGAN_2, KETERANGAN_3, KETERANGAN_4, KETERANGAN_5, KETERANGAN_6, KETERANGAN_7, KETERANGAN_8, KETERANGAN_9, KETERANGAN_10) VALUES('" & TbNoBukti.Text & "','" & rw.Cells(0).Value & "','" & rw.Cells(1).Value & "','" & rw.Cells(2).Value & "','" & rw.Cells(3).Value & "','" & rw.Cells(4).Value & "','" & rw.Cells(5).Value & "','" & rw.Cells(6).Value & "','" & rw.Cells(7).Value & "','" & rw.Cells(8).Value & "','" & rw.Cells(9).Value & "','" & rw.Cells(10).Value & "'," & CDec(rw.Cells(11).Value) & ",'" & rw.Cells(12).Value & "','" & rw.Cells(13).Value & "','" & rw.Cells(14).Value & "','" & rw.Cells(15).Value & "','" & rw.Cells(16).Value & "','" & rw.Cells(17).Value & "','" & rw.Cells(18).Value & "','" & rw.Cells(19).Value & "','" & rw.Cells(20).Value & "','" & rw.Cells(21).Value & "','" & rw.Cells(22).Value & "')", Conn)
-                Cmd.ExecuteNonQuery()
-            End If
-        Next
+        Cmd = New SqlCommand("Select * from PERMINTAAN_PEMBELIAN_DETIL where NO_BUKTI in (select max(NO_BUKTI) from PERMINTAAN_PEMBELIAN_DETIL)", Conn)
+        Dim urutan As String
+        Dim hitung As Long
+        Dim MyDateTime As DateTime = Now()
+        Dim MyString As String
+        MyString = MyDateTime.ToString("yyyy/MM/")
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+
+        If Not Rd.HasRows Then
+            urutan = "EBL" + MyString + "000001"
+
+            For Each rw As DataGridViewRow In DataGridView1.Rows
+                If Not rw.Cells(0).Value = "" Then
+                    Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN_DETIL (NO_BUKTI, NO_URUT, NAMA_BARANG, NAMA_BARANG_2, NAMA_BARANG_3, NAMA_BARANG_4, NAMA_BARANG_5, NAMA_BARANG_6, NAMA_BARANG_7, NAMA_BARANG_8, NAMA_BARANG_9, NAMA_BARANG_10, JUMLAH, SATUAN, KETERANGAN_1, KETERANGAN_2, KETERANGAN_3, KETERANGAN_4, KETERANGAN_5, KETERANGAN_6, KETERANGAN_7, KETERANGAN_8, KETERANGAN_9, KETERANGAN_10) VALUES('" & urutan & "','" & rw.Cells(0).Value & "','" & rw.Cells(1).Value & "','" & rw.Cells(2).Value & "','" & rw.Cells(3).Value & "','" & rw.Cells(4).Value & "','" & rw.Cells(5).Value & "','" & rw.Cells(6).Value & "','" & rw.Cells(7).Value & "','" & rw.Cells(8).Value & "','" & rw.Cells(9).Value & "','" & rw.Cells(10).Value & "'," & CDec(rw.Cells(11).Value) & ",'" & rw.Cells(12).Value & "','" & rw.Cells(13).Value & "','" & rw.Cells(14).Value & "','" & rw.Cells(15).Value & "','" & rw.Cells(16).Value & "','" & rw.Cells(17).Value & "','" & rw.Cells(18).Value & "','" & rw.Cells(19).Value & "','" & rw.Cells(20).Value & "','" & rw.Cells(21).Value & "','" & rw.Cells(22).Value & "')", Conn)
+                    Cmd.ExecuteNonQuery()
+                End If
+            Next
+            MsgBox("Data Berhasil Diinput")
+        Else
+
+            hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 3) + 1
+            urutan = "EBL" + MyString + Microsoft.VisualBasic.Right("000000" & hitung, 6)
+
+            For Each rw As DataGridViewRow In DataGridView1.Rows
+                If Not rw.Cells(0).Value = "" Then
+                    Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN_DETIL (NO_BUKTI, NO_URUT, NAMA_BARANG, NAMA_BARANG_2, NAMA_BARANG_3, NAMA_BARANG_4, NAMA_BARANG_5, NAMA_BARANG_6, NAMA_BARANG_7, NAMA_BARANG_8, NAMA_BARANG_9, NAMA_BARANG_10, JUMLAH, SATUAN, KETERANGAN_1, KETERANGAN_2, KETERANGAN_3, KETERANGAN_4, KETERANGAN_5, KETERANGAN_6, KETERANGAN_7, KETERANGAN_8, KETERANGAN_9, KETERANGAN_10) VALUES('" & urutan & "','" & rw.Cells(0).Value & "','" & rw.Cells(1).Value & "','" & rw.Cells(2).Value & "','" & rw.Cells(3).Value & "','" & rw.Cells(4).Value & "','" & rw.Cells(5).Value & "','" & rw.Cells(6).Value & "','" & rw.Cells(7).Value & "','" & rw.Cells(8).Value & "','" & rw.Cells(9).Value & "','" & rw.Cells(10).Value & "'," & CDec(rw.Cells(11).Value) & ",'" & rw.Cells(12).Value & "','" & rw.Cells(13).Value & "','" & rw.Cells(14).Value & "','" & rw.Cells(15).Value & "','" & rw.Cells(16).Value & "','" & rw.Cells(17).Value & "','" & rw.Cells(18).Value & "','" & rw.Cells(19).Value & "','" & rw.Cells(20).Value & "','" & rw.Cells(21).Value & "','" & rw.Cells(22).Value & "')", Conn)
+                    Rd.Close()
+                    Cmd.ExecuteNonQuery()
+                End If
+            Next
+            MsgBox("Data Berhasil Diinput")
+        End If
         Conn.Close()
         'Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN VALUES('" & TbNoBukti.Text & "','" & rw.Cells(0).Value & "','" & rw.Cells(1).Value & "','" & rw.Cells(2).Value & "','" & rw.Cells(3).Value & "','" & rw.Cells(4).Value & "','" & rw.Cells(5).Value & "','" & rw.Cells(6).Value & "','" & rw.Cells(7).Value & "','" & rw.Cells(8).Value & "','" & rw.Cells(9).Value & "','" & rw.Cells(10).Value & "'," & CDec(rw.Cells(11).Value) & ",'" & rw.Cells(12).Value & "','" & rw.Cells(13).Value & "','" & rw.Cells(14).Value & "','" & rw.Cells(15).Value & "','" & rw.Cells(16).Value & "','" & rw.Cells(17).Value & "','" & rw.Cells(18).Value & "','" & rw.Cells(19).Value & "','" & rw.Cells(20).Value & "','" & rw.Cells(21).Value & "','" & rw.Cells(22).Value & "')", Conn)
         'Cmd.Execu teNonQuery()
@@ -134,6 +161,40 @@ Public Class Form1
                     Form2.Show()
                
             End Select
+        End If
+    End Sub
+
+    Private Sub TbKodeAkun_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TbKodeAkun.KeyPress
+        If e.KeyChar = Chr(13) Then
+            Call koneksi_master()
+            ' siapkan koneksi database
+            ' siapkan data adapter untuk data retrieval
+            Da = New SqlDataAdapter("SELECT * From AKUN WHERE KODE_AKUN LIKE  '" & TbKodeAkun.Text & "%'", Conn)
+            ' siapkan datatable untuk menampung data dari database
+            Dt = New DataTable
+            ' enclose di dalam try-catch block
+            ' untuk menghindari crash jika terjadi kesalahan database
+            Try
+                Me.DataGridView2.Columns("KodeAkun").Visible = False
+                Me.DataGridView2.Columns("NamaAkun").Visible = False
+                ' ambil data dari database
+                Da.Fill(Dt)
+                ' bind data ke combobox
+                DataGridView2.DataSource = Dt
+                ' DONE!!!
+            Catch ex As Exception
+                ' tampilkan pesan error
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    
+    Private Sub DataGridView2_CellMouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView2.CellMouseDoubleClick
+        If e.RowIndex >= 0 Then
+            'Cells 0 and 1 is Hidden
+            TbKodeAkun.Text = DataGridView2.Rows(e.RowIndex).Cells(2).Value
+            TbNamaAkun.Text = DataGridView2.Rows(e.RowIndex).Cells(3).Value
         End If
     End Sub
 End Class
