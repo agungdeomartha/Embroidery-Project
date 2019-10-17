@@ -1,0 +1,12 @@
+D:\LKM\Embro\Embroidery\Embroidery\bin\Debug\Embroidery.exe
+D:\LKM\Embro\Embroidery\Embroidery\bin\Debug\Embroidery.pdb
+D:\LKM\Embro\Embroidery\Embroidery\bin\Debug\Embroidery.xml
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\ResolveAssemblyReference.cache
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.Form1.resources
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.Resources.resources
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.vbproj.GenerateResource.Cache
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.exe
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.xml
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.pdb
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.Form2.resources
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.Form3.resources
