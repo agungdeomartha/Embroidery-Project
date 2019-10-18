@@ -64,6 +64,8 @@ Partial Class Form1
         Me.DataGridView2 = New System.Windows.Forms.DataGridView
         Me.KodeAkun = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.NamaAkun = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.BtnCari = New System.Windows.Forms.Button
+        Me.BtnOK = New System.Windows.Forms.Button
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -338,12 +340,32 @@ Partial Class Form1
         Me.NamaAkun.HeaderText = "Nama Akun"
         Me.NamaAkun.Name = "NamaAkun"
         '
+        'BtnCari
+        '
+        Me.BtnCari.Location = New System.Drawing.Point(264, 40)
+        Me.BtnCari.Name = "BtnCari"
+        Me.BtnCari.Size = New System.Drawing.Size(34, 20)
+        Me.BtnCari.TabIndex = 17
+        Me.BtnCari.Text = "Cari"
+        Me.BtnCari.UseVisualStyleBackColor = True
+        '
+        'BtnOK
+        '
+        Me.BtnOK.Location = New System.Drawing.Point(299, 40)
+        Me.BtnOK.Name = "BtnOK"
+        Me.BtnOK.Size = New System.Drawing.Size(34, 20)
+        Me.BtnOK.TabIndex = 18
+        Me.BtnOK.Text = "OK"
+        Me.BtnOK.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1366, 669)
+        Me.Controls.Add(Me.BtnOK)
+        Me.Controls.Add(Me.BtnCari)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.ButtonKeluar)
         Me.Controls.Add(Me.ButtonHapus)
@@ -412,5 +434,7 @@ Partial Class Form1
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents KodeAkun As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NamaAkun As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BtnCari As System.Windows.Forms.Button
+    Friend WithEvents BtnOK As System.Windows.Forms.Button
 
 End Class

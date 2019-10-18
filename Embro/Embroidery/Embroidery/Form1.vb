@@ -40,6 +40,11 @@ Public Class Form1
         TbKodeAkun.Enabled = False
         TbNamaAkun.Enabled = False
         TbKeterangan.Enabled = False
+        ButtonSimpan.Text = "Simpan"
+
+        'hide button cari dan ok
+        BtnCari.Visible = False
+        BtnOK.Visible = False
 
     End Sub
     Sub SiapTambah()
@@ -73,6 +78,12 @@ Public Class Form1
         TbKodeAkun.Enabled = True
         TbNamaAkun.Enabled = True
         TbKeterangan.Enabled = True
+
+        ButtonSimpan.Text = "Ubah"
+
+        'Tampilkan btn cari dan OK
+        BtnCari.Visible = True
+        BtnOK.Visible = True
     End Sub
     Sub SiapHapus()
         'rubah status button
@@ -89,6 +100,10 @@ Public Class Form1
         TbKodeAkun.Enabled = True
         TbNamaAkun.Enabled = True
         TbKeterangan.Enabled = True
+        ButtonSimpan.Text = "Hapus"
+        'Tampilkan btn cari dan OK
+        BtnCari.Visible = True
+        BtnOK.Visible = True
     End Sub
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Call KondisiAwal()
@@ -143,7 +158,11 @@ Public Class Form1
                     Rd.Close()
                     Cmd.ExecuteNonQuery()
                 End If
+                
             Next
+            Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN (NO_BUKTI, TANGGAL, KODE_AKUN_MUTASI, KETERANGAN) VALUES('" & urutan & "','" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "','" & TbKodeAkun.Text & "','" & TbKeterangan.Text & "')", Conn)
+            Rd.Close()
+            Cmd.ExecuteNonQuery()
             MsgBox("Data Berhasil Diinput")
         End If
         Conn.Close()
@@ -175,6 +194,7 @@ Public Class Form1
             ' enclose di dalam try-catch block
             ' untuk menghindari crash jika terjadi kesalahan database
             Try
+                'Hide kolom 1 dan 2
                 Me.DataGridView2.Columns("KodeAkun").Visible = False
                 Me.DataGridView2.Columns("NamaAkun").Visible = False
                 ' ambil data dari database

@@ -31,6 +31,16 @@
 
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Form1.Show()
+        Dim max As Integer
+        For i As Integer = 0 To Form1.DataGridView1.Rows.Count() - 1 Step 1
+            If i = 0 Then
+                max = Form1.DataGridView1.Rows(i).Cells(0).Value + 1
+            End If
+            If max < Form1.DataGridView1.Rows(i).Cells(0).Value + 1 Then
+                max = Form1.DataGridView1.Rows(i).Cells(0).Value + 1
+            End If
+        Next
+        TbNoUrut.Text = max.ToString().PadLeft(3, "0"c)
     End Sub
 
     Private Sub TextBox16_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TbKeterangan6.TextChanged
@@ -42,6 +52,10 @@
             Case Keys.Escape
                 Me.Close()
         End Select
+
+    End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class

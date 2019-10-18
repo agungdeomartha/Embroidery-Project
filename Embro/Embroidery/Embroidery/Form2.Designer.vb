@@ -69,6 +69,7 @@ Partial Class Form2
         Me.TbNamaBarang1.Name = "TbNamaBarang1"
         Me.TbNamaBarang1.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang1.TabIndex = 0
+        Me.TbNamaBarang1.Text = "-"
         '
         'TbNamaBarang2
         '
@@ -76,6 +77,7 @@ Partial Class Form2
         Me.TbNamaBarang2.Name = "TbNamaBarang2"
         Me.TbNamaBarang2.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang2.TabIndex = 1
+        Me.TbNamaBarang2.Text = "-"
         '
         'Button1
         '
@@ -102,6 +104,7 @@ Partial Class Form2
         Me.TbNamaBarang8.Name = "TbNamaBarang8"
         Me.TbNamaBarang8.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang8.TabIndex = 5
+        Me.TbNamaBarang8.Text = "-"
         '
         'TbNamaBarang7
         '
@@ -109,6 +112,7 @@ Partial Class Form2
         Me.TbNamaBarang7.Name = "TbNamaBarang7"
         Me.TbNamaBarang7.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang7.TabIndex = 4
+        Me.TbNamaBarang7.Text = "-"
         '
         'TbNamaBarang6
         '
@@ -116,6 +120,7 @@ Partial Class Form2
         Me.TbNamaBarang6.Name = "TbNamaBarang6"
         Me.TbNamaBarang6.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang6.TabIndex = 7
+        Me.TbNamaBarang6.Text = "-"
         '
         'TbNamaBarang5
         '
@@ -123,6 +128,7 @@ Partial Class Form2
         Me.TbNamaBarang5.Name = "TbNamaBarang5"
         Me.TbNamaBarang5.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang5.TabIndex = 6
+        Me.TbNamaBarang5.Text = "-"
         '
         'TbNamaBarang4
         '
@@ -130,6 +136,7 @@ Partial Class Form2
         Me.TbNamaBarang4.Name = "TbNamaBarang4"
         Me.TbNamaBarang4.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang4.TabIndex = 9
+        Me.TbNamaBarang4.Text = "-"
         '
         'TbNamaBarang3
         '
@@ -137,6 +144,7 @@ Partial Class Form2
         Me.TbNamaBarang3.Name = "TbNamaBarang3"
         Me.TbNamaBarang3.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang3.TabIndex = 8
+        Me.TbNamaBarang3.Text = "-"
         '
         'TbNamaBarang10
         '
@@ -144,6 +152,7 @@ Partial Class Form2
         Me.TbNamaBarang10.Name = "TbNamaBarang10"
         Me.TbNamaBarang10.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang10.TabIndex = 11
+        Me.TbNamaBarang10.Text = "-"
         '
         'TbNamaBarang9
         '
@@ -151,6 +160,7 @@ Partial Class Form2
         Me.TbNamaBarang9.Name = "TbNamaBarang9"
         Me.TbNamaBarang9.Size = New System.Drawing.Size(224, 20)
         Me.TbNamaBarang9.TabIndex = 10
+        Me.TbNamaBarang9.Text = "-"
         '
         'TbKeterangan10
         '
@@ -158,6 +168,7 @@ Partial Class Form2
         Me.TbKeterangan10.Name = "TbKeterangan10"
         Me.TbKeterangan10.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan10.TabIndex = 21
+        Me.TbKeterangan10.Text = "-"
         '
         'TbKeterangan9
         '
@@ -165,6 +176,7 @@ Partial Class Form2
         Me.TbKeterangan9.Name = "TbKeterangan9"
         Me.TbKeterangan9.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan9.TabIndex = 20
+        Me.TbKeterangan9.Text = "-"
         '
         'TbKeterangan4
         '
@@ -172,6 +184,7 @@ Partial Class Form2
         Me.TbKeterangan4.Name = "TbKeterangan4"
         Me.TbKeterangan4.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan4.TabIndex = 19
+        Me.TbKeterangan4.Text = "-"
         '
         'TbKeterangan3
         '
@@ -179,6 +192,7 @@ Partial Class Form2
         Me.TbKeterangan3.Name = "TbKeterangan3"
         Me.TbKeterangan3.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan3.TabIndex = 18
+        Me.TbKeterangan3.Text = "-"
         '
         'TbKeterangan6
         '
@@ -186,6 +200,7 @@ Partial Class Form2
         Me.TbKeterangan6.Name = "TbKeterangan6"
         Me.TbKeterangan6.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan6.TabIndex = 17
+        Me.TbKeterangan6.Text = "-"
         '
         'TbKeterangan5
         '
@@ -193,6 +208,7 @@ Partial Class Form2
         Me.TbKeterangan5.Name = "TbKeterangan5"
         Me.TbKeterangan5.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan5.TabIndex = 16
+        Me.TbKeterangan5.Text = "-"
         '
         'TbKeterangan8
         '
@@ -200,6 +216,7 @@ Partial Class Form2
         Me.TbKeterangan8.Name = "TbKeterangan8"
         Me.TbKeterangan8.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan8.TabIndex = 15
+        Me.TbKeterangan8.Text = "-"
         '
         'TbKeterangan7
         '
@@ -207,6 +224,7 @@ Partial Class Form2
         Me.TbKeterangan7.Name = "TbKeterangan7"
         Me.TbKeterangan7.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan7.TabIndex = 14
+        Me.TbKeterangan7.Text = "-"
         '
         'TbKeterangan2
         '
@@ -214,6 +232,7 @@ Partial Class Form2
         Me.TbKeterangan2.Name = "TbKeterangan2"
         Me.TbKeterangan2.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan2.TabIndex = 13
+        Me.TbKeterangan2.Text = "-"
         '
         'TbKeterangan1
         '
@@ -221,6 +240,7 @@ Partial Class Form2
         Me.TbKeterangan1.Name = "TbKeterangan1"
         Me.TbKeterangan1.Size = New System.Drawing.Size(224, 20)
         Me.TbKeterangan1.TabIndex = 12
+        Me.TbKeterangan1.Text = "-"
         '
         'Label1
         '
@@ -250,6 +270,7 @@ Partial Class Form2
         Me.TbSatuan.Name = "TbSatuan"
         Me.TbSatuan.Size = New System.Drawing.Size(172, 20)
         Me.TbSatuan.TabIndex = 25
+        Me.TbSatuan.Text = "-"
         '
         'TbJumlah
         '
@@ -257,6 +278,7 @@ Partial Class Form2
         Me.TbJumlah.Name = "TbJumlah"
         Me.TbJumlah.Size = New System.Drawing.Size(172, 20)
         Me.TbJumlah.TabIndex = 24
+        Me.TbJumlah.Text = "0"
         '
         'Label3
         '
