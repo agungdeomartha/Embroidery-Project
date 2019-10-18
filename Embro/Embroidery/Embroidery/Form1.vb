@@ -133,7 +133,9 @@ Public Class Form1
         Dim hitung As Long
         Dim MyDateTime As DateTime = Now()
         Dim MyString As String
+        Dim MyString2 As String
         MyString = MyDateTime.ToString("yyyy/MM/")
+        MyString2 = MyDateTime.ToString("yyyy-MM-dd hh:mm:ss")
         Rd = Cmd.ExecuteReader
         Rd.Read()
 
@@ -160,7 +162,7 @@ Public Class Form1
                 End If
                 
             Next
-            Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN (NO_BUKTI, TANGGAL, KODE_AKUN_MUTASI, KETERANGAN) VALUES('" & urutan & "','" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "','" & TbKodeAkun.Text & "','" & TbKeterangan.Text & "')", Conn)
+            Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN (NO_BUKTI, TANGGAL, KODE_AKUN_MUTASI, KETERANGAN,TGLTAMBAH) VALUES('" & urutan & "','" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "','" & TbKodeAkun.Text & "','" & TbKeterangan.Text & "','" & MyString2 & "')", Conn)
             Rd.Close()
             Cmd.ExecuteNonQuery()
             MsgBox("Data Berhasil Diinput")
