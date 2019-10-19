@@ -93,10 +93,12 @@ Partial Class Form2
         '
         'TbNoUrut
         '
+        Me.TbNoUrut.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbNoUrut.Location = New System.Drawing.Point(84, 12)
         Me.TbNoUrut.Name = "TbNoUrut"
-        Me.TbNoUrut.Size = New System.Drawing.Size(64, 20)
+        Me.TbNoUrut.Size = New System.Drawing.Size(31, 22)
         Me.TbNoUrut.TabIndex = 3
+        Me.TbNoUrut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TbNamaBarang8
         '
@@ -354,7 +356,7 @@ Partial Class Form2
         Me.PictureBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PictureBox5.Location = New System.Drawing.Point(11, 7)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(145, 30)
+        Me.PictureBox5.Size = New System.Drawing.Size(113, 30)
         Me.PictureBox5.TabIndex = 33
         Me.PictureBox5.TabStop = False
         '

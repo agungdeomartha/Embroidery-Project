@@ -134,8 +134,10 @@ Public Class Form1
         Dim MyDateTime As DateTime = Now()
         Dim MyString As String
         Dim MyString2 As String
+
         MyString = MyDateTime.ToString("yyyy/MM/")
         MyString2 = MyDateTime.ToString("yyyy-MM-dd hh:mm:ss")
+
         Rd = Cmd.ExecuteReader
         Rd.Read()
 
@@ -145,10 +147,30 @@ Public Class Form1
             For Each rw As DataGridViewRow In DataGridView1.Rows
                 If Not rw.Cells(0).Value = "" Then
                     Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN_DETIL (NO_BUKTI, NO_URUT, NAMA_BARANG, NAMA_BARANG_2, NAMA_BARANG_3, NAMA_BARANG_4, NAMA_BARANG_5, NAMA_BARANG_6, NAMA_BARANG_7, NAMA_BARANG_8, NAMA_BARANG_9, NAMA_BARANG_10, JUMLAH, SATUAN, KETERANGAN_1, KETERANGAN_2, KETERANGAN_3, KETERANGAN_4, KETERANGAN_5, KETERANGAN_6, KETERANGAN_7, KETERANGAN_8, KETERANGAN_9, KETERANGAN_10) VALUES('" & urutan & "','" & rw.Cells(0).Value & "','" & rw.Cells(1).Value & "','" & rw.Cells(2).Value & "','" & rw.Cells(3).Value & "','" & rw.Cells(4).Value & "','" & rw.Cells(5).Value & "','" & rw.Cells(6).Value & "','" & rw.Cells(7).Value & "','" & rw.Cells(8).Value & "','" & rw.Cells(9).Value & "','" & rw.Cells(10).Value & "'," & CDec(rw.Cells(11).Value) & ",'" & rw.Cells(12).Value & "','" & rw.Cells(13).Value & "','" & rw.Cells(14).Value & "','" & rw.Cells(15).Value & "','" & rw.Cells(16).Value & "','" & rw.Cells(17).Value & "','" & rw.Cells(18).Value & "','" & rw.Cells(19).Value & "','" & rw.Cells(20).Value & "','" & rw.Cells(21).Value & "','" & rw.Cells(22).Value & "')", Conn)
+                    Rd.Close()
                     Cmd.ExecuteNonQuery()
                 End If
             Next
+            Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN (NO_BUKTI, TANGGAL, KODE_AKUN_MUTASI, KETERANGAN, KODEUSERT, TGLTAMBAH, HAPUS) VALUES('" & urutan & "','" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "','" & TbKodeAkun.Text & "','" & TbKeterangan.Text & "', '  USER1  ', '" & MyString2 & "', 0 )", Conn)
+            Rd.Close()
+            Cmd.ExecuteNonQuery()
             MsgBox("Data Berhasil Diinput")
+
+        ElseIf Microsoft.VisualBasic.Mid(Rd.GetString(0), 4, 8) <> MyString Then
+            urutan = "EBL" + MyString + "000001"
+
+            For Each rw As DataGridViewRow In DataGridView1.Rows
+                If Not rw.Cells(0).Value = "" Then
+                    Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN_DETIL (NO_BUKTI, NO_URUT, NAMA_BARANG, NAMA_BARANG_2, NAMA_BARANG_3, NAMA_BARANG_4, NAMA_BARANG_5, NAMA_BARANG_6, NAMA_BARANG_7, NAMA_BARANG_8, NAMA_BARANG_9, NAMA_BARANG_10, JUMLAH, SATUAN, KETERANGAN_1, KETERANGAN_2, KETERANGAN_3, KETERANGAN_4, KETERANGAN_5, KETERANGAN_6, KETERANGAN_7, KETERANGAN_8, KETERANGAN_9, KETERANGAN_10) VALUES('" & urutan & "','" & rw.Cells(0).Value & "','" & rw.Cells(1).Value & "','" & rw.Cells(2).Value & "','" & rw.Cells(3).Value & "','" & rw.Cells(4).Value & "','" & rw.Cells(5).Value & "','" & rw.Cells(6).Value & "','" & rw.Cells(7).Value & "','" & rw.Cells(8).Value & "','" & rw.Cells(9).Value & "','" & rw.Cells(10).Value & "'," & CDec(rw.Cells(11).Value) & ",'" & rw.Cells(12).Value & "','" & rw.Cells(13).Value & "','" & rw.Cells(14).Value & "','" & rw.Cells(15).Value & "','" & rw.Cells(16).Value & "','" & rw.Cells(17).Value & "','" & rw.Cells(18).Value & "','" & rw.Cells(19).Value & "','" & rw.Cells(20).Value & "','" & rw.Cells(21).Value & "','" & rw.Cells(22).Value & "')", Conn)
+                    Rd.Close()
+                    Cmd.ExecuteNonQuery()
+                End If
+            Next
+            Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN (NO_BUKTI, TANGGAL, KODE_AKUN_MUTASI, KETERANGAN, KODEUSERT, TGLTAMBAH, HAPUS) VALUES('" & urutan & "','" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "','" & TbKodeAkun.Text & "','" & TbKeterangan.Text & "', '  USER1  ', '" & MyString2 & "', 0 )", Conn)
+            Rd.Close()
+            Cmd.ExecuteNonQuery()
+            MsgBox("Data Berhasil Diinput")
+
         Else
 
             hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 3) + 1
@@ -160,13 +182,14 @@ Public Class Form1
                     Rd.Close()
                     Cmd.ExecuteNonQuery()
                 End If
-                
+
             Next
-            Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN (NO_BUKTI, TANGGAL, KODE_AKUN_MUTASI, KETERANGAN,TGLTAMBAH) VALUES('" & urutan & "','" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "','" & TbKodeAkun.Text & "','" & TbKeterangan.Text & "','" & MyString2 & "')", Conn)
+            Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN (NO_BUKTI, TANGGAL, KODE_AKUN_MUTASI, KETERANGAN, KODEUSERT, TGLTAMBAH, HAPUS) VALUES('" & urutan & "','" & DateTimePicker1.Value.ToString("yyyy-MM-dd") & "','" & TbKodeAkun.Text & "','" & TbKeterangan.Text & "', '  USER1  ', '" & MyString2 & "', 0 )", Conn)
             Rd.Close()
             Cmd.ExecuteNonQuery()
             MsgBox("Data Berhasil Diinput")
         End If
+
         Conn.Close()
         'Cmd = New SqlCommand("INSERT INTO PERMINTAAN_PEMBELIAN VALUES('" & TbNoBukti.Text & "','" & rw.Cells(0).Value & "','" & rw.Cells(1).Value & "','" & rw.Cells(2).Value & "','" & rw.Cells(3).Value & "','" & rw.Cells(4).Value & "','" & rw.Cells(5).Value & "','" & rw.Cells(6).Value & "','" & rw.Cells(7).Value & "','" & rw.Cells(8).Value & "','" & rw.Cells(9).Value & "','" & rw.Cells(10).Value & "'," & CDec(rw.Cells(11).Value) & ",'" & rw.Cells(12).Value & "','" & rw.Cells(13).Value & "','" & rw.Cells(14).Value & "','" & rw.Cells(15).Value & "','" & rw.Cells(16).Value & "','" & rw.Cells(17).Value & "','" & rw.Cells(18).Value & "','" & rw.Cells(19).Value & "','" & rw.Cells(20).Value & "','" & rw.Cells(21).Value & "','" & rw.Cells(22).Value & "')", Conn)
         'Cmd.Execu teNonQuery()

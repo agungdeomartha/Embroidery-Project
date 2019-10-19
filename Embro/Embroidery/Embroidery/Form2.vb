@@ -27,9 +27,11 @@
         row.Cells(21).Value = TbKeterangan9.Text
         row.Cells(22).Value = TbKeterangan10.Text
         Form1.DataGridView1.Rows.Add(row)
+        Me.Close()
     End Sub
 
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        TbNoUrut.Enabled = False
         Form1.Show()
         Dim max As Integer
         For i As Integer = 0 To Form1.DataGridView1.Rows.Count() - 1 Step 1
