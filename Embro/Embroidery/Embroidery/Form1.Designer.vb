@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
         Me.TbNoBukti = New System.Windows.Forms.TextBox
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
         Me.Label3 = New System.Windows.Forms.Label
@@ -66,38 +65,34 @@ Partial Class Form1
         Me.NamaAkun = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.BtnCari = New System.Windows.Forms.Button
         Me.BtnOK = New System.Windows.Forms.Button
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 47)
+        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Location = New System.Drawing.Point(14, 112)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(51, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "No. Bukti"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(46, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Tanggal"
-        '
         'TbNoBukti
         '
-        Me.TbNoBukti.Location = New System.Drawing.Point(114, 42)
+        Me.TbNoBukti.Location = New System.Drawing.Point(14, 127)
         Me.TbNoBukti.Name = "TbNoBukti"
         Me.TbNoBukti.Size = New System.Drawing.Size(145, 20)
         Me.TbNoBukti.TabIndex = 2
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(114, 68)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(14, 149)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(145, 20)
         Me.DateTimePicker1.TabIndex = 3
@@ -105,7 +100,8 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(996, 47)
+        Me.Label3.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.Label3.Location = New System.Drawing.Point(284, 122)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 13)
         Me.Label3.TabIndex = 4
@@ -113,22 +109,23 @@ Partial Class Form1
         '
         'TbKodeAkun
         '
-        Me.TbKodeAkun.Location = New System.Drawing.Point(1068, 44)
+        Me.TbKodeAkun.Location = New System.Drawing.Point(356, 119)
         Me.TbKodeAkun.Name = "TbKodeAkun"
-        Me.TbKodeAkun.Size = New System.Drawing.Size(85, 20)
+        Me.TbKodeAkun.Size = New System.Drawing.Size(96, 20)
         Me.TbKodeAkun.TabIndex = 5
         '
         'TbNamaAkun
         '
-        Me.TbNamaAkun.Location = New System.Drawing.Point(1159, 44)
+        Me.TbNamaAkun.Location = New System.Drawing.Point(458, 119)
         Me.TbNamaAkun.Name = "TbNamaAkun"
-        Me.TbNamaAkun.Size = New System.Drawing.Size(195, 20)
+        Me.TbNamaAkun.Size = New System.Drawing.Size(205, 20)
         Me.TbNamaAkun.TabIndex = 6
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(996, 75)
+        Me.Label4.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label4.Location = New System.Drawing.Point(288, 149)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(62, 13)
         Me.Label4.TabIndex = 7
@@ -136,16 +133,17 @@ Partial Class Form1
         '
         'TbKeterangan
         '
-        Me.TbKeterangan.Location = New System.Drawing.Point(1068, 70)
+        Me.TbKeterangan.Location = New System.Drawing.Point(356, 146)
         Me.TbKeterangan.Name = "TbKeterangan"
-        Me.TbKeterangan.Size = New System.Drawing.Size(286, 20)
+        Me.TbKeterangan.Size = New System.Drawing.Size(307, 20)
         Me.TbKeterangan.TabIndex = 8
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoUrut, Me.NamaBarang1, Me.NamaBarang2, Me.NamaBarang3, Me.NamaBarang4, Me.NamaBarang5, Me.NamaBarang6, Me.NamaBarang7, Me.NamaBarang8, Me.NamaBarang9, Me.NamaBarang10, Me.Jumlah, Me.Satuan, Me.Keterangan1, Me.Keterangan2, Me.Keterangan3, Me.Keterangan4, Me.Keterangan5, Me.Keterangan6, Me.Keterangan7, Me.Keterangan8, Me.Keterangan9, Me.Keterangan10})
-        Me.DataGridView1.Location = New System.Drawing.Point(19, 121)
+        Me.DataGridView1.Location = New System.Drawing.Point(21, 188)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1052, 354)
         Me.DataGridView1.TabIndex = 9
@@ -267,65 +265,81 @@ Partial Class Form1
         '
         'ButtonSimpan
         '
-        Me.ButtonSimpan.Location = New System.Drawing.Point(578, 481)
+        Me.ButtonSimpan.BackColor = System.Drawing.Color.Aqua
+        Me.ButtonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonSimpan.Location = New System.Drawing.Point(578, 561)
         Me.ButtonSimpan.Name = "ButtonSimpan"
         Me.ButtonSimpan.Size = New System.Drawing.Size(71, 33)
         Me.ButtonSimpan.TabIndex = 10
         Me.ButtonSimpan.Text = "Simpan"
-        Me.ButtonSimpan.UseVisualStyleBackColor = True
+        Me.ButtonSimpan.UseVisualStyleBackColor = False
         '
         'ButtonBatal
         '
-        Me.ButtonBatal.Location = New System.Drawing.Point(655, 481)
+        Me.ButtonBatal.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ButtonBatal.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonBatal.Location = New System.Drawing.Point(655, 561)
         Me.ButtonBatal.Name = "ButtonBatal"
         Me.ButtonBatal.Size = New System.Drawing.Size(71, 33)
         Me.ButtonBatal.TabIndex = 11
         Me.ButtonBatal.Text = "Batal"
-        Me.ButtonBatal.UseVisualStyleBackColor = True
+        Me.ButtonBatal.UseVisualStyleBackColor = False
         '
         'ButtonTambah
         '
+        Me.ButtonTambah.BackColor = System.Drawing.Color.SpringGreen
+        Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTambah.Location = New System.Drawing.Point(28, 618)
         Me.ButtonTambah.Name = "ButtonTambah"
         Me.ButtonTambah.Size = New System.Drawing.Size(66, 33)
         Me.ButtonTambah.TabIndex = 12
         Me.ButtonTambah.Text = "Tambah"
-        Me.ButtonTambah.UseVisualStyleBackColor = True
+        Me.ButtonTambah.UseVisualStyleBackColor = False
         '
         'ButtonUbah
         '
+        Me.ButtonUbah.BackColor = System.Drawing.Color.Yellow
+        Me.ButtonUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonUbah.Location = New System.Drawing.Point(100, 618)
         Me.ButtonUbah.Name = "ButtonUbah"
         Me.ButtonUbah.Size = New System.Drawing.Size(66, 33)
         Me.ButtonUbah.TabIndex = 13
         Me.ButtonUbah.Text = "Ubah"
-        Me.ButtonUbah.UseVisualStyleBackColor = True
+        Me.ButtonUbah.UseVisualStyleBackColor = False
         '
         'ButtonHapus
         '
+        Me.ButtonHapus.BackColor = System.Drawing.Color.Red
+        Me.ButtonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonHapus.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ButtonHapus.Location = New System.Drawing.Point(172, 618)
         Me.ButtonHapus.Name = "ButtonHapus"
         Me.ButtonHapus.Size = New System.Drawing.Size(66, 33)
         Me.ButtonHapus.TabIndex = 14
         Me.ButtonHapus.Text = "Hapus"
-        Me.ButtonHapus.UseVisualStyleBackColor = True
+        Me.ButtonHapus.UseVisualStyleBackColor = False
         '
         'ButtonKeluar
         '
+        Me.ButtonKeluar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ButtonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonKeluar.ForeColor = System.Drawing.SystemColors.Control
         Me.ButtonKeluar.Location = New System.Drawing.Point(1279, 618)
         Me.ButtonKeluar.Name = "ButtonKeluar"
         Me.ButtonKeluar.Size = New System.Drawing.Size(66, 33)
         Me.ButtonKeluar.TabIndex = 15
         Me.ButtonKeluar.Text = "Keluar"
-        Me.ButtonKeluar.UseVisualStyleBackColor = True
+        Me.ButtonKeluar.UseVisualStyleBackColor = False
         '
         'DataGridView2
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.FloralWhite
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KodeAkun, Me.NamaAkun})
-        Me.DataGridView2.Location = New System.Drawing.Point(1089, 121)
+        Me.DataGridView2.Location = New System.Drawing.Point(1080, 188)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(265, 354)
         Me.DataGridView2.TabIndex = 16
@@ -342,7 +356,7 @@ Partial Class Form1
         '
         'BtnCari
         '
-        Me.BtnCari.Location = New System.Drawing.Point(264, 40)
+        Me.BtnCari.Location = New System.Drawing.Point(163, 127)
         Me.BtnCari.Name = "BtnCari"
         Me.BtnCari.Size = New System.Drawing.Size(34, 20)
         Me.BtnCari.TabIndex = 17
@@ -351,12 +365,30 @@ Partial Class Form1
         '
         'BtnOK
         '
-        Me.BtnOK.Location = New System.Drawing.Point(299, 40)
+        Me.BtnOK.Location = New System.Drawing.Point(198, 127)
         Me.BtnOK.Name = "BtnOK"
         Me.BtnOK.Size = New System.Drawing.Size(34, 20)
         Me.BtnOK.TabIndex = 18
         Me.BtnOK.Text = "OK"
         Me.BtnOK.UseVisualStyleBackColor = True
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.LightYellow
+        Me.PictureBox3.Location = New System.Drawing.Point(9, 178)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(1345, 374)
+        Me.PictureBox3.TabIndex = 21
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Cornsilk
+        Me.PictureBox2.Location = New System.Drawing.Point(18, 608)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(231, 51)
+        Me.PictureBox2.TabIndex = 22
+        Me.PictureBox2.TabStop = False
         '
         'Form1
         '
@@ -381,19 +413,21 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TbNoBukti)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TbNoBukti As System.Windows.Forms.TextBox
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -436,5 +470,7 @@ Partial Class Form1
     Friend WithEvents NamaAkun As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents BtnCari As System.Windows.Forms.Button
     Friend WithEvents BtnOK As System.Windows.Forms.Button
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 
 End Class

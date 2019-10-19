@@ -318,9 +318,9 @@ Partial Class Form2
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(-9, -2)
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, -2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(531, 380)
+        Me.PictureBox1.Size = New System.Drawing.Size(521, 376)
         Me.PictureBox1.TabIndex = 29
         Me.PictureBox1.TabStop = False
         '
@@ -400,10 +400,12 @@ Partial Class Form2
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

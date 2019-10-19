@@ -11,7 +11,7 @@ Module Module_Koneksi
 
     Public Sub koneksi_master()
 
-        sql = "Data Source=Computer_Server3,1433;Network Library=DBMSSOCN;Initial Catalog=D:\LKMBENANGEMBROMISDATA\DATAMASTER.MDF;User ID=sa;Password=ilyvm;"
+        sql = "Data Source=Computer_Server,1433;Network Library=DBMSSOCN;Initial Catalog=D:\LKMBENANGEMBROMISDATA\DATAMASTER.MDF;User ID=sa;Password=ilyvm;"
         Conn = New SqlConnection(sql)
         Try
             If Conn.State = ConnectionState.Closed Then
@@ -24,7 +24,7 @@ Module Module_Koneksi
 
     Public Sub koneksi_transaksi()
 
-        sql = "Data Source=Computer_Server3,1433;Network Library=DBMSSOCN;Initial Catalog=D:\LKMBENANGEMBROMISDATA\TRANSAKSI.MDF;User ID=sa;Password=ilyvm;"
+        sql = "Data Source=Computer_Server,1433;Network Library=DBMSSOCN;Initial Catalog=D:\LKMBENANGEMBROMISDATA\TRANSAKSI.MDF;User ID=sa;Password=ilyvm;"
         Conn = New SqlConnection(sql)
         Try
             If Conn.State = ConnectionState.Closed Then

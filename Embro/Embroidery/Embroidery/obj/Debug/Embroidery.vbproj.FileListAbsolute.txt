@@ -10,3 +10,4 @@ D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.xml
 D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.pdb
 D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.Form2.resources
 D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.Form3.resources
+D:\LKM\Embro\Embroidery\Embroidery\obj\Debug\Embroidery.FormCari.resources
