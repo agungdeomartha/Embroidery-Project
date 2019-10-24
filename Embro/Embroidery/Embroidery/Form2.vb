@@ -26,7 +26,7 @@
         row.Cells(20).Value = TbKeterangan8.Text
         row.Cells(21).Value = TbKeterangan9.Text
         row.Cells(22).Value = TbKeterangan10.Text
-        Form1.DataGridView1.Rows.Add(row)
+        Form1.DataGridViewUbah.Rows.Add(row)
         Me.Close()
     End Sub
 
@@ -34,12 +34,12 @@
         TbNoUrut.Enabled = False
         Form1.Show()
         Dim max As Integer
-        For i As Integer = 0 To Form1.DataGridView1.Rows.Count() - 1 Step 1
+        For i As Integer = 0 To Form1.DataGridViewUbah.Rows.Count() - 1 Step 1
             If i = 0 Then
-                max = Form1.DataGridView1.Rows(i).Cells(0).Value + 1
+                max = Form1.DataGridViewUbah.Rows(i).Cells(0).Value + 1
             End If
-            If max < Form1.DataGridView1.Rows(i).Cells(0).Value + 1 Then
-                max = Form1.DataGridView1.Rows(i).Cells(0).Value + 1
+            If max < Form1.DataGridViewUbah.Rows(i).Cells(0).Value + 1 Then
+                max = Form1.DataGridViewUbah.Rows(i).Cells(0).Value + 1
             End If
         Next
         TbNoUrut.Text = max.ToString().PadLeft(3, "0"c)

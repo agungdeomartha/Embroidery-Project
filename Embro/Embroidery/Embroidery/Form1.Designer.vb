@@ -67,10 +67,12 @@ Partial Class Form1
         Me.BtnOK = New System.Windows.Forms.Button
         Me.PictureBox3 = New System.Windows.Forms.PictureBox
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
+        Me.DataGridViewUbah = New System.Windows.Forms.DataGridView
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewUbah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -140,6 +142,8 @@ Partial Class Form1
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoUrut, Me.NamaBarang1, Me.NamaBarang2, Me.NamaBarang3, Me.NamaBarang4, Me.NamaBarang5, Me.NamaBarang6, Me.NamaBarang7, Me.NamaBarang8, Me.NamaBarang9, Me.NamaBarang10, Me.Jumlah, Me.Satuan, Me.Keterangan1, Me.Keterangan2, Me.Keterangan3, Me.Keterangan4, Me.Keterangan5, Me.Keterangan6, Me.Keterangan7, Me.Keterangan8, Me.Keterangan9, Me.Keterangan10})
@@ -152,116 +156,139 @@ Partial Class Form1
         '
         Me.NoUrut.HeaderText = "No. Urut"
         Me.NoUrut.Name = "NoUrut"
+        Me.NoUrut.Width = 67
         '
         'NamaBarang1
         '
         Me.NamaBarang1.HeaderText = "Nama Barang 1"
         Me.NamaBarang1.Name = "NamaBarang1"
+        Me.NamaBarang1.Width = 89
         '
         'NamaBarang2
         '
         Me.NamaBarang2.HeaderText = "Nama Barang 2"
         Me.NamaBarang2.Name = "NamaBarang2"
+        Me.NamaBarang2.Width = 89
         '
         'NamaBarang3
         '
         Me.NamaBarang3.HeaderText = "Nama Barang 3"
         Me.NamaBarang3.Name = "NamaBarang3"
+        Me.NamaBarang3.Width = 89
         '
         'NamaBarang4
         '
         Me.NamaBarang4.HeaderText = "Nama Barang 4"
         Me.NamaBarang4.Name = "NamaBarang4"
+        Me.NamaBarang4.Width = 89
         '
         'NamaBarang5
         '
         Me.NamaBarang5.HeaderText = "Nama Barang 5"
         Me.NamaBarang5.Name = "NamaBarang5"
+        Me.NamaBarang5.Width = 89
         '
         'NamaBarang6
         '
         Me.NamaBarang6.HeaderText = "Nama Barang 6"
         Me.NamaBarang6.Name = "NamaBarang6"
+        Me.NamaBarang6.Width = 89
         '
         'NamaBarang7
         '
         Me.NamaBarang7.HeaderText = "Nama Barang 7"
         Me.NamaBarang7.Name = "NamaBarang7"
+        Me.NamaBarang7.Width = 89
         '
         'NamaBarang8
         '
         Me.NamaBarang8.HeaderText = "Nama Barang 8"
         Me.NamaBarang8.Name = "NamaBarang8"
+        Me.NamaBarang8.Width = 89
         '
         'NamaBarang9
         '
         Me.NamaBarang9.HeaderText = "Nama Barang 9"
         Me.NamaBarang9.Name = "NamaBarang9"
+        Me.NamaBarang9.Width = 89
         '
         'NamaBarang10
         '
         Me.NamaBarang10.HeaderText = "Nama Barang 10"
         Me.NamaBarang10.Name = "NamaBarang10"
+        Me.NamaBarang10.Width = 92
         '
         'Jumlah
         '
         Me.Jumlah.HeaderText = "Jumlah"
         Me.Jumlah.Name = "Jumlah"
+        Me.Jumlah.Width = 65
         '
         'Satuan
         '
         Me.Satuan.HeaderText = "Satuan"
         Me.Satuan.Name = "Satuan"
+        Me.Satuan.Width = 66
         '
         'Keterangan1
         '
         Me.Keterangan1.HeaderText = "Keterangan1"
         Me.Keterangan1.Name = "Keterangan1"
+        Me.Keterangan1.Width = 93
         '
         'Keterangan2
         '
         Me.Keterangan2.HeaderText = "Keterangan 2"
         Me.Keterangan2.Name = "Keterangan2"
+        Me.Keterangan2.Width = 88
         '
         'Keterangan3
         '
         Me.Keterangan3.HeaderText = "Keterangan 3"
         Me.Keterangan3.Name = "Keterangan3"
+        Me.Keterangan3.Width = 88
         '
         'Keterangan4
         '
         Me.Keterangan4.HeaderText = "Keterangan 4"
         Me.Keterangan4.Name = "Keterangan4"
+        Me.Keterangan4.Width = 88
         '
         'Keterangan5
         '
         Me.Keterangan5.HeaderText = "Keterangan 5"
         Me.Keterangan5.Name = "Keterangan5"
+        Me.Keterangan5.Width = 88
         '
         'Keterangan6
         '
         Me.Keterangan6.HeaderText = "Keterangan6"
         Me.Keterangan6.Name = "Keterangan6"
+        Me.Keterangan6.Width = 93
         '
         'Keterangan7
         '
         Me.Keterangan7.HeaderText = "Keterangan 7"
         Me.Keterangan7.Name = "Keterangan7"
+        Me.Keterangan7.Width = 88
         '
         'Keterangan8
         '
         Me.Keterangan8.HeaderText = "Keterangan 8"
         Me.Keterangan8.Name = "Keterangan8"
+        Me.Keterangan8.Width = 88
         '
         'Keterangan9
         '
         Me.Keterangan9.HeaderText = "Keterangan 9"
         Me.Keterangan9.Name = "Keterangan9"
+        Me.Keterangan9.Width = 88
         '
         'Keterangan10
         '
         Me.Keterangan10.HeaderText = "Keterangan 10"
         Me.Keterangan10.Name = "Keterangan10"
+        Me.Keterangan10.Width = 94
         '
         'ButtonSimpan
         '
@@ -390,12 +417,24 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 22
         Me.PictureBox2.TabStop = False
         '
+        'DataGridViewUbah
+        '
+        Me.DataGridViewUbah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridViewUbah.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridViewUbah.BackgroundColor = System.Drawing.Color.FloralWhite
+        Me.DataGridViewUbah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewUbah.Location = New System.Drawing.Point(22, 188)
+        Me.DataGridViewUbah.Name = "DataGridViewUbah"
+        Me.DataGridViewUbah.Size = New System.Drawing.Size(1052, 354)
+        Me.DataGridViewUbah.TabIndex = 23
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1366, 669)
+        Me.Controls.Add(Me.DataGridViewUbah)
         Me.Controls.Add(Me.BtnOK)
         Me.Controls.Add(Me.BtnCari)
         Me.Controls.Add(Me.DataGridView2)
@@ -423,6 +462,7 @@ Partial Class Form1
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewUbah, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -472,5 +512,6 @@ Partial Class Form1
     Friend WithEvents BtnOK As System.Windows.Forms.Button
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents DataGridViewUbah As System.Windows.Forms.DataGridView
 
 End Class
